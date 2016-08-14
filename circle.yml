@@ -38,3 +38,4 @@ test:
     override:
       - python -V
       - pip list
+      - python main.py
