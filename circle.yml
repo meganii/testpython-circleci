@@ -7,6 +7,8 @@ dependencies:
     - mecab-0.996
     - mecab-ipadic-2.7.0-20070801
   pre:
+    - git config --global user.name "meganii"
+    - git config --global user.email "yuhei24@gmail.com"
     - pip install --upgrade pip
     - sudo apt-get update -qq
     - sudo apt-get install -qq python3-dev
@@ -39,4 +41,10 @@ test:
     override:
       - python -V
       - pip list
+
+deployment:
+  master:
+    branch: master
+    commands:
       - python main.py
+      - git add . && git commit -m "[ci skip] publish"; if [ $? -eq 0 ]; then git push origin master; else :; fi
