@@ -8,7 +8,6 @@ dependencies:
     - mecab-ipadic-2.7.0-20070801
   pre:
     - pip install --upgrade pip
-    - pip install coveralls
     - sudo apt-get update -qq
     - sudo apt-get install -qq python3-dev
     - >
@@ -34,9 +33,7 @@ dependencies:
     - >
       cd mecab-ipadic-2.7.0-20070801 &&
       sudo make install
-    - pip install setuptools
-    - pip install sklearn
-    - pip install numpy
+    - pip install -r requirements.txt
 
 test:
     override:
