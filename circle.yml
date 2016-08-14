@@ -36,6 +36,7 @@ dependencies:
       sudo make install
     - pip install setuptools
     - pip install sklearn
+    - pip install numpy
 
 test:
     override:
