@@ -1,6 +1,6 @@
 machine:
   python:
-    version: 3.4.2
+    version: 3.5.1
 
 dependencies:
   cache_directories:
@@ -33,6 +33,7 @@ dependencies:
     - >
       cd mecab-ipadic-2.7.0-20070801 &&
       sudo make install
+    - pip install sklearn
 
 test:
     override:
