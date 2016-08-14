@@ -47,5 +47,4 @@ deployment:
     branch: master
     commands:
       - python main.py
-      - cd data
-      - git add . && git commit -m "[ci skip] publish"; if [ $? -eq 0 ]; then git push origin master; else :; fi
+      - cd data && pwd && git add . && git commit -m "[ci skip] publish"; if [ $? -eq 0 ]; then git push origin master; else :; fi
