@@ -1,6 +1,13 @@
 machine:
   timezone: Asia/Tokyo
+  python:
+    version: 3.5.1
+
+dependencies:
+  override:
+    - bash ./install_mecab.sh
 
 test:
   override:
     - python -V
+    - pip list
