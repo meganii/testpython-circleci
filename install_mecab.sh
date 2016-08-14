@@ -31,7 +31,7 @@ cd /var/tmp
 curl -O https://mecab.googlecode.com/files/mecab-ipadic-2.7.0-20070801.tar.gz
 tar zxfv mecab-ipadic-2.7.0-20070801.tar.gz
 cd mecab-ipadic-2.7.0-20070801
-./configure --with-charset=utf8 --prefix=$HOME/usr --with-mecab-config=/usr/local/bin/mecab-config
+./configure --with-charset=utf8
 make
 make DESTDIR=$HOME install
 
