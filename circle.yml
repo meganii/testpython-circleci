@@ -11,4 +11,4 @@ dependencies:
 
 test:
   override:
-    - docker run jojomi/hugo hugo version
+    - docker run meganii/mecab2 mecab -v
