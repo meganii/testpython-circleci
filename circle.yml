@@ -3,10 +3,13 @@ machine:
     - docker
 
 dependencies:
+  pre:
+    - git clone git@github.com:jojomi/docker-hugo.git && cd docker-hugo
+    - docker build -t jojomi/hugo:latest .
+
   override:
     - docker info
-    - docker build --rm=false -t meganii/mecab2 .
 
 test:
   override:
-    - docker run meganii/mecab2 mecab -v
+    - docker run jojomi/hugo hugo version
